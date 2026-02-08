@@ -4,6 +4,8 @@ A professional portfolio website showcasing Developer Relations work, AI project
 
 🌐 **Live Site**: [https://MilanKaur-01.github.io/speaker-portfolio/](https://MilanKaur-01.github.io/speaker-portfolio/)
 
+📤 **Need to upload pictures?** → See the [📸 Upload Guide](UPLOAD-GUIDE.md) for step-by-step instructions!
+
 ## 🎯 Overview
 
 This portfolio highlights expertise in:
@@ -55,29 +57,29 @@ git push origin main
 
 ## 📸 Adding Photos to Your Portfolio
 
-The portfolio includes two types of images:
+**👉 For detailed step-by-step instructions with screenshots, see [UPLOAD-GUIDE.md](UPLOAD-GUIDE.md)**
+
+The portfolio includes three types of images:
 
 ### 1. Profile Picture (Hero Section)
-To add your profile picture that appears at the top of the page:
-1. Navigate to the `images/` folder
-2. Upload your photo as `profile.jpg` or `profile.png`
-   - Recommended size: 400x400px to 800x800px (square)
-   - Should be a professional headshot
-   - Keep file size under 200KB
+Your photo appears in a circle at the top of the page.
+- **Upload as:** `profile.jpg` or `profile.png` in the `images/` folder
+- **Size:** 400x400px to 800x800px (square)
+- **File size:** Under 200KB
 
-### 2. Gallery Photos
-To add photos to the gallery section:
-1. Navigate to the `images/` folder
-2. Read the detailed instructions in `images/README.md`
-3. Upload your photos with the recommended filenames:
-   - `conference1.jpg`, `conference2.jpg`, `conference3.jpg`
-   - `speaking1.jpg`, `speaking2.jpg`
-   - `community1.jpg`, `community2.jpg`
-   - `workshop1.jpg`, `demo1.jpg`
+### 2. Social Media Preview Image (Header)
+This image appears when you share your portfolio on LinkedIn, Twitter, etc.
+- **Upload as:** `og-image.jpg` in the `images/` folder  
+- **Size:** 1200x630px (banner format)
+- **File size:** Under 500KB
 
-4. The gallery will automatically display your images once uploaded!
+### 3. Gallery Photos
+Photos of your speaking engagements, conferences, and events.
+- **Upload as:** `conference1.jpg`, `speaking1.jpg`, `community1.jpg`, etc. in the `images/` folder
+- **Size:** 800-1200px on the longest side
+- **File size:** Under 500KB each
 
-**See [images/README.md](images/README.md) for complete photo specifications and detailed instructions.**
+**📖 See the complete [UPLOAD-GUIDE.md](UPLOAD-GUIDE.md) for detailed instructions on how to upload each type.**
 
 ## ✨ Features
 

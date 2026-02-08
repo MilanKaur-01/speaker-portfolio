@@ -1,6 +1,18 @@
-# Images Folder - Photo Gallery & Profile Setup Guide
+# Images Folder - Complete Image Upload Guide
 
-This folder contains images for your portfolio's photo gallery section and profile picture. Follow these instructions to add your photos to the website.
+This folder contains all images for your portfolio. Follow these instructions to add your photos to the website.
+
+**📖 For a comprehensive, beginner-friendly guide, see [../UPLOAD-GUIDE.md](../UPLOAD-GUIDE.md)**
+
+---
+
+## 📤 Three Types of Images
+
+### 1. 👤 Profile Picture (Hero Section)
+### 2. 🖼️ Social Media Preview Image (og-image)  
+### 3. 📸 Gallery Photos (Speaking Events)
+
+---
 
 ## 👤 Profile Picture (Hero Section)
 
@@ -46,7 +58,50 @@ This folder contains images for your portfolio's photo gallery section and profi
 
 ---
 
-## 📸 Required Images
+## 🖼️ Social Media Preview Image (Header)
+
+### What is this?
+When you share your portfolio link on LinkedIn, Twitter, Facebook, or other social media, this image appears as the preview thumbnail.
+
+### Required File
+- **Filename**: `og-image.jpg`
+- **Location**: This folder (`/images/`)
+- **Purpose**: Social media preview/share image (also called "Open Graph" image)
+
+### Specifications
+- **Recommended dimensions**: 1200px wide × 630px tall (standard social media size)
+- **File format**: JPEG (.jpg)
+- **Maximum file size**: 500KB (for fast loading)
+- **Content**: Banner-style image - could include:
+  - Photo of you speaking at an event
+  - Your name and professional title
+  - Branding or professional backdrop
+
+### How to Add Your Social Media Preview Image
+
+1. **Create your image**:
+   - Design a 1200×630px banner image
+   - Include your photo and/or name
+   - Keep important content in the center (edges may be cropped on some platforms)
+   - Use your brand colors (pink theme matches the site)
+   - Save as `og-image.jpg`
+
+2. **Upload via GitHub**:
+   - Go to your repository on GitHub
+   - Navigate to the `images/` folder
+   - Click "Add file" → "Upload files"
+   - Upload your image named `og-image.jpg`
+   - Click "Commit changes"
+
+3. **Test it**:
+   - Wait 2-5 minutes for GitHub Pages to rebuild
+   - Share your portfolio link on LinkedIn or Twitter
+   - Your image should appear as the preview!
+   - Use [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) to test
+
+---
+
+## 📸 Gallery Photos (Speaking Events)
 
 The portfolio gallery is designed to display 9 photos in a beautiful masonry layout. Here are the recommended image filenames:
 
