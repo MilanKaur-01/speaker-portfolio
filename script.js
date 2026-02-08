@@ -262,28 +262,39 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadProfileImage() {
         const profileImg = document.querySelector('.profile-img');
         if (profileImg) {
-            const imagePaths = ['images/profile.jpg', 'images/profile.png'];
-            let imageLoaded = false;
+            // Try jpg first, then png if jpg fails
+            const tryLoadImage = (path, fallbackPath) => {
+                const img = new Image();
+                img.src = path;
+                
+                img.onload = function() {
+                    profileImg.src = path;
+                    console.log(`Profile image loaded: ${path}`);
+                };
+                
+                img.onerror = function() {
+                    console.log(`Profile image not found: ${path}`);
+                    if (fallbackPath) {
+                        // Try fallback image
+                        const fallbackImg = new Image();
+                        fallbackImg.src = fallbackPath;
+                        
+                        fallbackImg.onload = function() {
+                            profileImg.src = fallbackPath;
+                            console.log(`Profile image loaded: ${fallbackPath}`);
+                        };
+                        
+                        fallbackImg.onerror = function() {
+                            console.log(`Profile image not found: ${fallbackPath} - Using placeholder`);
+                        };
+                    } else {
+                        console.log('Using placeholder image');
+                    }
+                };
+            };
             
-            imagePaths.forEach(path => {
-                if (!imageLoaded) {
-                    const img = new Image();
-                    img.src = path;
-                    
-                    img.onload = function() {
-                        if (!imageLoaded) {
-                            profileImg.src = path;
-                            imageLoaded = true;
-                            console.log(`Profile image loaded: ${path}`);
-                        }
-                    };
-                    
-                    img.onerror = function() {
-                        // If both fail, the placeholder SVG will remain
-                        console.log(`Profile image not found: ${path} - Using placeholder`);
-                    };
-                }
-            });
+            // Try jpg first, then png as fallback
+            tryLoadImage('images/profile.jpg', 'images/profile.png');
         }
     }
     

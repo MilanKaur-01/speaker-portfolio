@@ -130,9 +130,9 @@ To add photos to the gallery section:
 ```css
 /* Update the CSS variables at the top of styles.css */
 :root {
-    --primary-blue: #E91E63;      /* Main brand color (pink) */
-    --primary-blue-dark: #C2185B; /* Hover states (dark pink) */
-    --accent-cyan: #FF4081;       /* Accents (light pink) */
+    --primary-pink: #E91E63;      /* Main brand color (pink) */
+    --primary-pink-dark: #C2185B; /* Hover states (dark pink) */
+    --accent-pink: #FF4081;       /* Accents (light pink) */
     /* ... and more */
 }
 ```
