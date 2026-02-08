@@ -3,19 +3,19 @@
    =================================== */
 
 :root {
-    /* Beach-Inspired Pastel Color Palette */
-    --veranda-blue: #6BB1AD;
-    --veranda-blue-dark: #5A9894;
-    --veranda-blue-light: #8BC5C2;
-    --sky-cloud: #A7BCBD;
-    --sky-cloud-light: #C1D1D2;
-    --lychee: #EDECDB;
-    --lychee-dark: #D8D6C4;
-    --melon: #E5A9A9;
-    --melon-light: #F0C5C5;
-    --cupid-pink: #E6748E;
-    --cupid-pink-dark: #D65C7A;
-    --cupid-pink-light: #EE9AAE;
+    /* Natural Palette - Simplified with Inkwell & Fresh Water blues */
+    --veranda-blue: #0C5E8A;
+    --veranda-blue-dark: #094A6E;
+    --veranda-blue-light: #5D9CBD;
+    --sky-cloud: #5D9CBD;
+    --sky-cloud-light: #8BBDD8;
+    --lychee: #F5F4F0;
+    --lychee-dark: #C1BFA8;
+    --melon: #8BBDD8;
+    --melon-light: #B3D4E8;
+    --cupid-pink: #5D9CBD;
+    --cupid-pink-dark: #0C5E8A;
+    --cupid-pink-light: #8BBDD8;
     --text-dark: #1F1F1F;
     --text-medium: #323130;
     --text-light: #605E5C;
@@ -24,8 +24,8 @@
     --background-gray: #FAF9F8;
     --border-gray: #EDEBE9;
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --shadow-hover: rgba(107, 177, 173, 0.3);
-    --shadow-accent: rgba(230, 116, 142, 0.2);
+    --shadow-hover: rgba(12, 94, 138, 0.3);
+    --shadow-accent: rgba(93, 156, 189, 0.2);
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -141,7 +141,7 @@ body {
 .hero {
     margin-top: 60px;
     padding: var(--spacing-md) 0;
-    background: linear-gradient(135deg, #6BB1AD 0%, #A7BCBD 50%, #8BC5C2 100%);
+    background: linear-gradient(135deg, #0C5E8A 0%, #5D9CBD 100%);
     color: var(--background-white);
     min-height: 400px;
     display: flex;
@@ -208,7 +208,7 @@ body {
 }
 
 .hero-tagline {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     margin: 0;
     opacity: 0.95;
 }
@@ -271,7 +271,7 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #6BB1AD, #E6748E, #E5A9A9);
+    background: linear-gradient(90deg, #0C5E8A, #5D9CBD, #8BBDD8);
     border-radius: 2px;
 }
 
@@ -317,7 +317,7 @@ section {
 }
 
 .talks-table thead {
-    background: linear-gradient(135deg, #6BB1AD 0%, #E6748E 100%);
+    background: linear-gradient(135deg, #0C5E8A 0%, #5D9CBD 100%);
     color: var(--background-white);
 }
 
@@ -359,7 +359,7 @@ section {
     display: inline-block;
     padding: 0.5rem 1rem;
     margin: 0.25rem;
-    background: linear-gradient(135deg, #6BB1AD 0%, #E6748E 100%);
+    background: linear-gradient(135deg, #0C5E8A 0%, #5D9CBD 100%);
     color: var(--background-white);
     text-decoration: none;
     border-radius: 6px;
@@ -369,7 +369,7 @@ section {
 }
 
 .link-btn:hover {
-    background: linear-gradient(135deg, #5A9894 0%, #D65C7A 100%);
+    background: linear-gradient(135deg, #094A6E 0%, #0C5E8A 100%);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px var(--shadow-hover);
 }
@@ -418,7 +418,7 @@ section {
 .project-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #6BB1AD, #E6748E, #E5A9A9);
+    background: linear-gradient(135deg, #0C5E8A, #5D9CBD, #8BBDD8);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -706,7 +706,7 @@ section {
     align-items: center;
     gap: var(--spacing-sm);
     padding: var(--spacing-sm) var(--spacing-md);
-    background: linear-gradient(135deg, #6BB1AD 0%, #E6748E 100%);
+    background: linear-gradient(135deg, #0C5E8A 0%, #5D9CBD 100%);
     color: var(--background-white);
     text-decoration: none;
     border-radius: 8px;
@@ -716,7 +716,7 @@ section {
 }
 
 .contact-link:hover {
-    background: linear-gradient(135deg, #5A9894 0%, #D65C7A 100%);
+    background: linear-gradient(135deg, #094A6E 0%, #0C5E8A 100%);
     transform: translateY(-4px);
     box-shadow: 0 8px 20px var(--shadow-hover);
 }
@@ -839,7 +839,10 @@ section {
         font-size: 1.5rem;
     }
     
-    .hero-tagline,
+    .hero-tagline {
+        font-size: 1.25rem;
+    }
+    
     .hero-description {
         font-size: 1rem;
     }
