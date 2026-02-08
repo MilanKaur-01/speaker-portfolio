@@ -3,19 +3,19 @@
    =================================== */
 
 :root {
-    /* Natural Palette - Inkwell, Fresh Water, Nourish, Balanced, Harvest */
+    /* Natural Palette - Simplified with Inkwell & Fresh Water blues */
     --veranda-blue: #0C5E8A;
     --veranda-blue-dark: #094A6E;
     --veranda-blue-light: #5D9CBD;
     --sky-cloud: #5D9CBD;
     --sky-cloud-light: #8BBDD8;
     --lychee: #F5F4F0;
-    --lychee-dark: #E8E6DC;
-    --melon: #DAC297;
-    --melon-light: #E8D5B8;
-    --cupid-pink: #798C5E;
-    --cupid-pink-dark: #5F7047;
-    --cupid-pink-light: #C1BFA8;
+    --lychee-dark: #C1BFA8;
+    --melon: #8BBDD8;
+    --melon-light: #B3D4E8;
+    --cupid-pink: #5D9CBD;
+    --cupid-pink-dark: #0C5E8A;
+    --cupid-pink-light: #8BBDD8;
     --text-dark: #1F1F1F;
     --text-medium: #323130;
     --text-light: #605E5C;
@@ -25,7 +25,7 @@
     --border-gray: #EDEBE9;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --shadow-hover: rgba(12, 94, 138, 0.3);
-    --shadow-accent: rgba(121, 140, 94, 0.2);
+    --shadow-accent: rgba(93, 156, 189, 0.2);
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -141,7 +141,7 @@ body {
 .hero {
     margin-top: 60px;
     padding: var(--spacing-md) 0;
-    background: linear-gradient(135deg, #0C5E8A 0%, #5D9CBD 50%, #798C5E 100%);
+    background: linear-gradient(135deg, #0C5E8A 0%, #5D9CBD 100%);
     color: var(--background-white);
     min-height: 400px;
     display: flex;
@@ -271,7 +271,7 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #0C5E8A, #5D9CBD, #798C5E);
+    background: linear-gradient(90deg, #0C5E8A, #5D9CBD, #8BBDD8);
     border-radius: 2px;
 }
 
@@ -418,7 +418,7 @@ section {
 .project-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #0C5E8A, #5D9CBD, #798C5E);
+    background: linear-gradient(135deg, #0C5E8A, #5D9CBD, #8BBDD8);
     border-radius: 12px;
     display: flex;
     align-items: center;
