@@ -1,8 +1,107 @@
-# Images Folder - Photo Gallery Setup Guide
+# Images Folder - Complete Image Upload Guide
 
-This folder contains images for your portfolio's photo gallery section. Follow these instructions to add your photos to the website.
+This folder contains all images for your portfolio. Follow these instructions to add your photos to the website.
 
-## 📸 Required Images
+**📖 For a comprehensive, beginner-friendly guide, see [../UPLOAD-GUIDE.md](../UPLOAD-GUIDE.md)**
+
+---
+
+## 📤 Three Types of Images
+
+### 1. 👤 Profile Picture (Hero Section)
+### 2. 🖼️ Social Media Preview Image (og-image)  
+### 3. 📸 Gallery Photos (Speaking Events)
+
+---
+
+## 👤 Profile Picture (Hero Section)
+
+### Required File
+- **Filename**: `profile.jpg` or `profile.png`
+- **Location**: This folder (`/images/`)
+- **Purpose**: Displays as a circular profile picture in the hero section at the top of the page
+
+### Specifications
+- **Recommended dimensions**: 400x400px to 800x800px (square)
+- **File format**: JPEG (.jpg) or PNG (.png)
+- **Maximum file size**: 200KB (for fast loading)
+- **Content**: Professional headshot or photo of you
+
+### How to Add Your Profile Picture
+
+1. **Prepare your photo**:
+   - Choose a professional, well-lit photo
+   - Crop it to a square (1:1 aspect ratio)
+   - Optimize it using [TinyPNG](https://tinypng.com/) or similar
+
+2. **Upload via GitHub**:
+   - Go to your repository on GitHub
+   - Navigate to the `images/` folder
+   - Click "Add file" → "Upload files"
+   - Upload your photo with the filename `profile.jpg` (or `profile.png`)
+   - Click "Commit changes"
+
+3. **Or via command line**:
+   ```bash
+   # Copy your profile photo to the images folder
+   cp /path/to/your/photo.jpg images/profile.jpg
+   
+   # Add and commit
+   git add images/profile.jpg
+   git commit -m "Add profile picture"
+   git push
+   ```
+
+4. **Wait 2-5 minutes** for GitHub Pages to rebuild, then check your site!
+
+**Note**: A placeholder avatar is currently displayed. Once you upload `profile.jpg`, it will automatically replace the placeholder.
+
+---
+
+## 🖼️ Social Media Preview Image (Header)
+
+### What is this?
+When you share your portfolio link on LinkedIn, Twitter, Facebook, or other social media, this image appears as the preview thumbnail.
+
+### Required File
+- **Filename**: `og-image.jpg`
+- **Location**: This folder (`/images/`)
+- **Purpose**: Social media preview/share image (also called "Open Graph" image)
+
+### Specifications
+- **Recommended dimensions**: 1200px wide × 630px tall (standard social media size)
+- **File format**: JPEG (.jpg)
+- **Maximum file size**: 500KB (for fast loading)
+- **Content**: Banner-style image - could include:
+  - Photo of you speaking at an event
+  - Your name and professional title
+  - Branding or professional backdrop
+
+### How to Add Your Social Media Preview Image
+
+1. **Create your image**:
+   - Design a 1200×630px banner image
+   - Include your photo and/or name
+   - Keep important content in the center (edges may be cropped on some platforms)
+   - Use your brand colors (pink theme matches the site)
+   - Save as `og-image.jpg`
+
+2. **Upload via GitHub**:
+   - Go to your repository on GitHub
+   - Navigate to the `images/` folder
+   - Click "Add file" → "Upload files"
+   - Upload your image named `og-image.jpg`
+   - Click "Commit changes"
+
+3. **Test it**:
+   - Wait 2-5 minutes for GitHub Pages to rebuild
+   - Share your portfolio link on LinkedIn or Twitter
+   - Your image should appear as the preview!
+   - Use [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) to test
+
+---
+
+## 📸 Gallery Photos (Speaking Events)
 
 The portfolio gallery is designed to display 9 photos in a beautiful masonry layout. Here are the recommended image filenames:
 
