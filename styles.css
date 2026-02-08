@@ -3,12 +3,12 @@
    =================================== */
 
 :root {
-    /* Microsoft-inspired Color Palette */
-    --primary-blue: #0078D4;
-    --primary-blue-dark: #005A9E;
-    --primary-blue-light: #50B8E7;
-    --secondary-blue: #00188F;
-    --accent-cyan: #00BCF2;
+    /* Pink Color Palette */
+    --primary-blue: #E91E63;
+    --primary-blue-dark: #C2185B;
+    --primary-blue-light: #F48FB1;
+    --secondary-blue: #AD1457;
+    --accent-cyan: #FF4081;
     --text-dark: #1F1F1F;
     --text-medium: #323130;
     --text-light: #605E5C;
@@ -17,7 +17,7 @@
     --background-gray: #FAF9F8;
     --border-gray: #EDEBE9;
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --shadow-hover: rgba(0, 120, 212, 0.2);
+    --shadow-hover: rgba(233, 30, 99, 0.2);
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -133,7 +133,7 @@ body {
 .hero {
     margin-top: 60px;
     padding: var(--spacing-xl) 0;
-    background: linear-gradient(135deg, #0078D4 0%, #00188F 100%);
+    background: linear-gradient(135deg, #E91E63 0%, #AD1457 100%);
     color: var(--background-white);
     text-align: center;
     min-height: 500px;
@@ -144,6 +144,28 @@ body {
 
 .hero-content {
     animation: fadeInUp 1s ease;
+}
+
+.hero-profile-image {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-normal);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title {
@@ -224,7 +246,7 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(90deg, #E91E63, #FF4081);
     border-radius: 2px;
 }
 
@@ -270,7 +292,7 @@ section {
 }
 
 .talks-table thead {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    background: linear-gradient(135deg, #E91E63 0%, #AD1457 100%);
     color: var(--background-white);
 }
 
@@ -371,7 +393,7 @@ section {
 .project-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, #E91E63, #FF4081);
     border-radius: 12px;
     display: flex;
     align-items: center;

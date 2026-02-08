@@ -255,6 +255,42 @@ document.addEventListener('DOMContentLoaded', function() {
     loadGalleryImages();
     
     // ===================================
+    // Profile Image Loading
+    // ===================================
+    
+    // Try to load the user's profile image, fallback to placeholder if not found
+    function loadProfileImage() {
+        const profileImg = document.querySelector('.profile-img');
+        if (profileImg) {
+            const imagePaths = ['images/profile.jpg', 'images/profile.png'];
+            let imageLoaded = false;
+            
+            imagePaths.forEach(path => {
+                if (!imageLoaded) {
+                    const img = new Image();
+                    img.src = path;
+                    
+                    img.onload = function() {
+                        if (!imageLoaded) {
+                            profileImg.src = path;
+                            imageLoaded = true;
+                            console.log(`Profile image loaded: ${path}`);
+                        }
+                    };
+                    
+                    img.onerror = function() {
+                        // If both fail, the placeholder SVG will remain
+                        console.log(`Profile image not found: ${path} - Using placeholder`);
+                    };
+                }
+            });
+        }
+    }
+    
+    // Load profile image on page load
+    loadProfileImage();
+    
+    // ===================================
     // Performance: Lazy Load Images
     // ===================================
     
@@ -283,6 +319,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // Console Welcome Message
 // ===================================
 
-console.log('%c👋 Welcome to Milan Kaur\'s Portfolio!', 'font-size: 20px; font-weight: bold; color: #0078D4;');
+console.log('%c👋 Welcome to Milan Kaur\'s Portfolio!', 'font-size: 20px; font-weight: bold; color: #E91E63;');
 console.log('%cDeveloper Relations & AI Advocacy', 'font-size: 14px; color: #605E5C;');
 console.log('%cInterested in collaboration? Let\'s connect!', 'font-size: 12px; color: #323130;');

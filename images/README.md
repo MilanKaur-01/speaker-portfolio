@@ -1,6 +1,50 @@
-# Images Folder - Photo Gallery Setup Guide
+# Images Folder - Photo Gallery & Profile Setup Guide
 
-This folder contains images for your portfolio's photo gallery section. Follow these instructions to add your photos to the website.
+This folder contains images for your portfolio's photo gallery section and profile picture. Follow these instructions to add your photos to the website.
+
+## 👤 Profile Picture (Hero Section)
+
+### Required File
+- **Filename**: `profile.jpg` or `profile.png`
+- **Location**: This folder (`/images/`)
+- **Purpose**: Displays as a circular profile picture in the hero section at the top of the page
+
+### Specifications
+- **Recommended dimensions**: 400x400px to 800x800px (square)
+- **File format**: JPEG (.jpg) or PNG (.png)
+- **Maximum file size**: 200KB (for fast loading)
+- **Content**: Professional headshot or photo of you
+
+### How to Add Your Profile Picture
+
+1. **Prepare your photo**:
+   - Choose a professional, well-lit photo
+   - Crop it to a square (1:1 aspect ratio)
+   - Optimize it using [TinyPNG](https://tinypng.com/) or similar
+
+2. **Upload via GitHub**:
+   - Go to your repository on GitHub
+   - Navigate to the `images/` folder
+   - Click "Add file" → "Upload files"
+   - Upload your photo with the filename `profile.jpg` (or `profile.png`)
+   - Click "Commit changes"
+
+3. **Or via command line**:
+   ```bash
+   # Copy your profile photo to the images folder
+   cp /path/to/your/photo.jpg images/profile.jpg
+   
+   # Add and commit
+   git add images/profile.jpg
+   git commit -m "Add profile picture"
+   git push
+   ```
+
+4. **Wait 2-5 minutes** for GitHub Pages to rebuild, then check your site!
+
+**Note**: A placeholder avatar is currently displayed. Once you upload `profile.jpg`, it will automatically replace the placeholder.
+
+---
 
 ## 📸 Required Images
 

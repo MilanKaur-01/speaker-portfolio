@@ -53,10 +53,20 @@ git push origin main
 # Wait 2-5 minutes, then check your live site
 ```
 
-## 📸 Adding Photos to Gallery
+## 📸 Adding Photos to Your Portfolio
 
-The portfolio includes a beautiful photo gallery section with placeholders. To add your photos:
+The portfolio includes two types of images:
 
+### 1. Profile Picture (Hero Section)
+To add your profile picture that appears at the top of the page:
+1. Navigate to the `images/` folder
+2. Upload your photo as `profile.jpg` or `profile.png`
+   - Recommended size: 400x400px to 800x800px (square)
+   - Should be a professional headshot
+   - Keep file size under 200KB
+
+### 2. Gallery Photos
+To add photos to the gallery section:
 1. Navigate to the `images/` folder
 2. Read the detailed instructions in `images/README.md`
 3. Upload your photos with the recommended filenames:
@@ -72,13 +82,13 @@ The portfolio includes a beautiful photo gallery section with placeholders. To a
 ## ✨ Features
 
 ### Design
-- **Modern & Professional**: Microsoft-inspired color palette (blues, whites, grays)
+- **Modern & Professional**: Pink color palette (pinks, whites, grays)
 - **Fully Responsive**: Optimized for mobile, tablet, and desktop
 - **Smooth Animations**: Scroll effects, hover transitions, and smooth scrolling navigation
 - **Accessible**: Semantic HTML5 and ARIA labels
 
 ### Sections
-1. **Hero Section**: Name, title, and call-to-action
+1. **Hero Section**: Name, title, profile picture, and call-to-action
 2. **About**: Professional bio and specializations
 3. **Popular Talks**: Professional table showcasing conference talks with video/GitHub links
 4. **AI Projects**: Card-based layout of code samples and projects
@@ -120,9 +130,9 @@ The portfolio includes a beautiful photo gallery section with placeholders. To a
 ```css
 /* Update the CSS variables at the top of styles.css */
 :root {
-    --primary-blue: #0078D4;      /* Main brand color */
-    --primary-blue-dark: #005A9E; /* Hover states */
-    --accent-cyan: #00BCF2;       /* Accents */
+    --primary-blue: #E91E63;      /* Main brand color (pink) */
+    --primary-blue-dark: #C2185B; /* Hover states (dark pink) */
+    --accent-cyan: #FF4081;       /* Accents (light pink) */
     /* ... and more */
 }
 ```
