@@ -224,25 +224,48 @@ body {
 /* Button Styles */
 .btn {
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 0.75rem 1.5rem;
     text-decoration: none;
     font-weight: 600;
-    border-radius: 6px;
-    transition: var(--transition-normal);
+    border-radius: 50px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.3px;
+    max-width: fit-content;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
-    color: var(--veranda-blue);
+    background: linear-gradient(135deg, #0C5E8A 0%, #5D9CBD 50%, #8BBDD8 100%);
+    color: var(--background-white);
+    box-shadow: 0 4px 15px rgba(12, 94, 138, 0.3);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #094A6E 0%, #0C5E8A 50%, #5D9CBD 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(12, 94, 138, 0.5), 
+                0 0 30px rgba(93, 156, 189, 0.4);
 }
 
 /* ===================================
