@@ -213,6 +213,26 @@ body {
     opacity: 0.95;
 }
 
+.hero-copilot-badge {
+    font-size: 0.875rem;
+    margin: 0;
+    opacity: 0.8;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.hero-copilot-badge a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    transition: opacity var(--transition-fast), border-color var(--transition-fast);
+}
+
+.hero-copilot-badge a:hover {
+    opacity: 1;
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+}
+
 .hero-description {
     font-size: 1rem;
     margin: 0;
@@ -762,22 +782,6 @@ section {
 .footer p {
     margin: 0.5rem 0;
     opacity: 0.8;
-}
-
-.footer-copilot {
-    font-size: 0.9rem;
-    margin-top: 1rem !important;
-}
-
-.footer-copilot a {
-    color: var(--sky-cloud-light);
-    text-decoration: none;
-    transition: opacity var(--transition-fast);
-}
-
-.footer-copilot a:hover {
-    opacity: 1;
-    text-decoration: underline;
 }
 
 /* ===================================
