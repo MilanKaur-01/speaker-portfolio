@@ -237,7 +237,6 @@ body {
     position: relative;
     overflow: hidden;
     letter-spacing: 0.5px;
-    will-change: transform;
 }
 
 .btn-primary {
@@ -254,7 +253,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
-    transition: left 0.5s ease;
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover::before {
