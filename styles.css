@@ -764,6 +764,22 @@ section {
     opacity: 0.8;
 }
 
+.footer-copilot {
+    font-size: 0.9rem;
+    margin-top: 1rem !important;
+}
+
+.footer-copilot a {
+    color: var(--sky-cloud-light);
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.footer-copilot a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
 /* ===================================
    Animations
    =================================== */
