@@ -355,7 +355,7 @@ section {
     bottom: 12px;
     right: 12px;
     background-color: rgba(0, 0, 0, 0.75);
-    color: #FFFFFF;
+    color: var(--background-white);
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 0.8rem;
