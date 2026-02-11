@@ -307,15 +307,76 @@ section {
 }
 
 .about-content {
-    max-width: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+}
+
+.about-text-column {
+    flex: 1;
+    text-align: left;
 }
 
 .about-text {
     font-size: 1.15rem;
     line-height: 1.8;
     color: var(--text-medium);
+}
+
+/* About Figure and Image */
+.about-figure {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 420px;
+    margin: 0;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(12, 94, 138, 0.15);
+    display: block;
+}
+
+/* AI Badge Overlay */
+.ai-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Layout - Stack with text above image */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .about-text-column {
+        text-align: center;
+    }
+    
+    .about-figure {
+        max-width: 100%;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
 }
 
 /* ===================================
