@@ -82,18 +82,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Open lightbox on gallery item click
     galleryItems.forEach(item => {
         item.addEventListener('click', function() {
-            // Check if there's an actual image (not a placeholder)
+            // Check if there's an actual image that loaded successfully
             const imgElement = this.querySelector('img');
             
-            if (imgElement && imgElement.src) {
+            if (imgElement && imgElement.naturalHeight > 0) {
                 lightbox.style.display = 'block';
                 lightboxImg.src = imgElement.src;
                 lightboxImg.alt = imgElement.alt || 'Gallery image';
                 
-                // Set caption if available
+                // Set caption from placeholder label or img alt text
                 const caption = this.querySelector('.gallery-placeholder p');
                 if (caption) {
                     document.querySelector('.lightbox-caption').textContent = caption.textContent;
+                } else if (imgElement.alt) {
+                    document.querySelector('.lightbox-caption').textContent = imgElement.alt;
                 }
             }
         });
@@ -211,18 +213,43 @@ document.addEventListener('DOMContentLoaded', function() {
         galleryItems.forEach(item => {
             const imageNumber = item.getAttribute('data-image');
             const placeholder = item.querySelector('.gallery-placeholder');
+            const existingImg = item.querySelector('img');
+            
+            if (existingImg) {
+                // Pre-rendered image: show it if it loads, keep placeholder if it fails
+                const showImage = () => {
+                    existingImg.style.display = 'block';
+                    if (placeholder) placeholder.style.display = 'none';
+                };
+                const hideImage = () => {
+                    existingImg.style.display = 'none';
+                    console.log(`Image not found: ${existingImg.src} - Placeholder will remain visible`);
+                };
+                
+                if (existingImg.complete) {
+                    if (existingImg.naturalHeight > 0) {
+                        showImage();
+                    } else {
+                        hideImage();
+                    }
+                } else {
+                    existingImg.onload = showImage;
+                    existingImg.onerror = hideImage;
+                }
+                return;
+            }
             
             // Example image paths - update these when actual images are added
             const imagePaths = {
-                '1': 'images/conference1.jpg',
-                '2': 'images/speaking1.jpg',
-                '3': 'images/community1.jpg',
-                '4': 'images/workshop1.jpg',
-                '5': 'images/conference2.jpg',
-                '6': 'images/speaking2.jpg',
+                '1': 'images/conference1.PNG',
+                '2': 'images/speaking1.JPEG',
+                '3': 'images/community1.JPEG',
+                '4': 'images/workshop1.JPEG',
+                '5': 'images/conference2.JPEG',
+                '6': 'images/speaking2.JPEG',
                 '7': 'images/demo1.jpg',
-                '8': 'images/community2.jpg',
-                '9': 'images/conference3.jpg'
+                '8': 'images/community2.JPEG',
+                '9': 'images/conference3.png'
             };
             
             const imagePath = imagePaths[imageNumber];
