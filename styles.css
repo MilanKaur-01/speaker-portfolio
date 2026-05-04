@@ -566,6 +566,25 @@ section {
     text-transform: uppercase;
 }
 
+.blogs-substack-cta {
+    max-width: 900px;
+    margin: var(--spacing-md) auto 0;
+    text-align: right;
+}
+
+.blogs-substack-cta a {
+    color: var(--veranda-blue);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.blogs-substack-cta a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
 /* ===================================
    Gallery Section
    =================================== */
