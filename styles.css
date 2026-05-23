@@ -268,6 +268,63 @@ body {
                 0 0 30px rgba(93, 156, 189, 0.4);
 }
 
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* LinkedIn – brand blue filled */
+.btn-linkedin {
+    background: #0077B5;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 119, 181, 0.35);
+    border: 2px solid transparent;
+}
+
+.btn-linkedin:hover {
+    background: #005f93;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 119, 181, 0.5);
+}
+
+/* Book time – ghost / outlined */
+.btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}
+
+/* Newsletter – warm gradient */
+.btn-newsletter {
+    background: linear-gradient(135deg, #f76b1c 0%, #fad961 100%);
+    color: #1a1a1a;
+    box-shadow: 0 4px 14px rgba(247, 107, 28, 0.35);
+    border: 2px solid transparent;
+}
+
+.btn-newsletter:hover {
+    background: linear-gradient(135deg, #e05a10 0%, #f5c842 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(247, 107, 28, 0.5);
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* ===================================
    Section Styles
    =================================== */
