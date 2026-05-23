@@ -286,6 +286,11 @@ body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    /* overflow:hidden on .btn breaks backdrop-filter on mobile; override it */
+    overflow: visible;
+    /* promote to own compositing layer so backdrop-filter renders on mobile */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .btn-linkedin:hover,
@@ -293,7 +298,8 @@ body {
 .btn-newsletter:hover {
     background: rgba(255, 255, 255, 0.28);
     border-color: rgba(255, 255, 255, 0.7);
-    transform: translateY(-2px);
+    transform: translateY(-2px) translateZ(0);
+    -webkit-transform: translateY(-2px) translateZ(0);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
@@ -967,6 +973,19 @@ section {
         grid-auto-rows: 150px;
     }
     
+    /* Frosted glass buttons – re-enforce on mobile */
+    .btn-linkedin,
+    .btn-ghost,
+    .btn-newsletter {
+        background: rgba(255, 255, 255, 0.18);
+        border: 1.5px solid rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        overflow: visible;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+
     /* Contact */
     .contact-links {
         flex-direction: column;
@@ -1011,6 +1030,19 @@ section {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 120px;
+    }
+
+    /* Frosted glass buttons – re-enforce on small screens */
+    .btn-linkedin,
+    .btn-ghost,
+    .btn-newsletter {
+        background: rgba(255, 255, 255, 0.18);
+        border: 1.5px solid rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        overflow: visible;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
     }
 }
 
