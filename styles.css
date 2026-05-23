@@ -275,47 +275,26 @@ body {
     margin-top: 0.25rem;
 }
 
-/* LinkedIn – brand blue filled */
-.btn-linkedin {
-    background: #0077B5;
-    color: #fff;
-    box-shadow: 0 4px 14px rgba(0, 119, 181, 0.35);
-    border: 2px solid transparent;
-}
-
-.btn-linkedin:hover {
-    background: #005f93;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 119, 181, 0.5);
-}
-
-/* Book time – ghost / outlined */
-.btn-ghost {
-    background: transparent;
-    color: #fff;
-    border: 2px solid rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(4px);
-}
-
-.btn-ghost:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
-}
-
-/* Newsletter – warm gradient */
+/* Hero buttons – unified frosted glass */
+.btn-linkedin,
+.btn-ghost,
 .btn-newsletter {
-    background: linear-gradient(135deg, #f76b1c 0%, #fad961 100%);
-    color: #1a1a1a;
-    box-shadow: 0 4px 14px rgba(247, 107, 28, 0.35);
-    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
+.btn-linkedin:hover,
+.btn-ghost:hover,
 .btn-newsletter:hover {
-    background: linear-gradient(135deg, #e05a10 0%, #f5c842 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(247, 107, 28, 0.5);
+    background: rgba(255, 255, 255, 0.28);
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 480px) {
